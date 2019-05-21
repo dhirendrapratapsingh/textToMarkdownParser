@@ -1,0 +1,39 @@
+.center2 {
+  text-align: center; }
+
+.right {
+  float: right !important; }
+
+.topic {
+  color: white; }
+
+.container2 {
+  margin: 0 auto;
+  max-width: 100%; }
+
+.row2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center; }
+
+.column3 {
+  flex: 3; }
+
+.column4 {
+  flex: 7;
+  padding-left: 4px; }
+
+.white2 {
+  background-color: transparent !important;
+  color: white !important; }

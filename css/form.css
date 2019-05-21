@@ -1,0 +1,34 @@
+/* bottom form section */
+.inputbox {
+  margin: 14px;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  /* min-height: 300px; */
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.inputbox:focus {
+  box-shadow: inset 0 1px 1px dodgerblue; }
+
+.outputbox {
+  margin: 20px;
+  padding: 5px;
+  display: block;
+ /*  min-height: 300px; */
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.inputbox:hover {
+  box-shadow: inset 0 1px 1px dodgerblue; }

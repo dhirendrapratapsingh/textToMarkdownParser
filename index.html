@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Angular Parser</title>
+  <meta name="description" content="Angular Parser">
+  <meta name="author" content="Dhiren">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/parallax.css">
+<link rel="stylesheet" href="css/comments.css">
+<link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<body>
+
+   <header class="header">
+    <nav>
+      <a href="#" class="brand-logo2"><img src="dhirencorp.png" width="150" height="95" alt="Dhiren corp" id="logoimage"></a>
+
+      <ul class="main-nav">
+        <li>
+          <a href="#">About </a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Solution</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a  href="https://www.linkedin.com/in/dhirendra-pratap-singh-530b17112/">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <a class="waves-effect" href="#">About </a>
+    </li>
+
+    <li>
+      <a class="waves-effect sidenav-close" href="#!">Services</a>
+    </li>
+    <li>
+      <a class="waves-effect sidenav-close" href="#">Solution</a>
+    </li>
+    <li>
+      <a class="waves-effect sidenav-close" href="#">Lectures</a>
+    </li>
+    <li>
+      <a class="waves-effect sidenav-close" href="#">Blog</a>
+    </li>
+    <li>
+      <a class="waves-effect sidenav-close" href="https://www.linkedin.com/in/dhirendra-pratap-singh-530b17112/">Contact</a>
+    </li>
+  </ul>
+
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+  <a href="#" class="chaticon"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+
+
+  <div ng-app="myApp" ng-controller="ParserController">
+    
+    <div id="index-banner" class="parallax-container valign-wrapper">
+      <div class="container2">
+      <div class="row2">
+        <div class="column2 center2">
+          <h3>Text to Custom Markdown parser</h3>
+        </div>
+      </div>
+
+        <div class="row2">
+          <div class="column2">
+            <div class="icon-block">
+          
+              <div class="talk-bubble tri-right round btm-left">
+                <div class="talktext">
+                  <textarea ng-model="textt" parse-To-Mark-Down="props" rows="7" cols="40" name="textbox" placeholder="Enter in markdown syntax"
+                    class="inputbox" id="textbox" style="height:unset"></textarea>
+                </div>
+              </div>
+          
+              <div class="display:flex">
+                <div class="column3">
+                  <div class="center2 avtar"><i class="fa fa-user-circle-o avtaricon" aria-hidden="true"></i></div>
+                </div>
+                <div class="column4">
+                  <h5>Provider<p class="lighttext">UNICODE</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column2">
+            <div class="icon-block">
+          
+              <div class="talk-bubble tri-right round btm-left">
+                <div class="talktext">
+                  <p id="target" class="outputbox"></p>
+                </div>
+              </div>
+          
+              <div class="display:flex">
+                <div class="column3">
+                  <div class="center2 avtar"><i class="fa fa-user-circle-o avtaricon" aria-hidden="true"></i></div>
+                </div>
+                <div class="column4">
+                  <h5>Consumer<p class="lighttext">Markdown</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="row2">
+          <div class='column2 center2'>
+            <button class="convertbutton" ng-click="updateTarget()">Convert</button>
+          </div>
+        </div>
+    
+        <br><br>
+      </div>
+    
+      <div class="parallax"><img src="background2.jpeg" alt="Unsplashed background img 1"></div>
+    </div>
+
+    <div class="container2" style="background: #f4f4f487;padding: 20px;">
+          <div class="row2">
+            <div class="column2 center2">
+              <h3>Corresponding HTML</h3>
+            </div>
+          </div>
+    
+          <div class="row2">
+            <div class="column2">
+              <div class="icon-block">
+          
+                <div class="talk-bubble tri-right round btm-left">
+                  <div class="talktext">
+                    <p id="htmltarget" class="outputbox"></p>
+                  </div>
+                </div>
+          
+                <div class="display:flex">
+                  <div class="column3">
+                    <div class="center2 avtar" ><i class="fa fa-user-circle-o avtaricon" style="color:gray" aria-hidden="true"></i></div>
+                  </div>
+                  <div class="column4">
+                    <h5>Consumer<p class="lighttext">HTML</p>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        
+
+  </div>
+
+  <footer>
+    <div style="width:100%;">
+
+      <div class="row2">
+        <div class="column2">
+          <p class="white2"> &copy; dhirendrapratapsingh398@gmail.com May 2019, All right reserved</p>
+        </div>
+
+        <div class="column2">
+          <ul class="main-nav" style="display:flex !important">
+            <li><a><label> Follow me on :</label></a></li>
+            <li> <a> <i class="fa fa-facebook-square white2" aria-hidden="true"></i> </a></li>
+            <li> <a> <i class="fa fa-linkedin-square white2" aria-hidden="true"></i> </a></li>
+            <li> <a><i class="fa fa-twitter white2" aria-hidden="true"></i> </a></li>
+            <li> <a><i class="fa fa-envelope white2" aria-hidden="true"></i> </a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  </footer>
+
+</body>
+
+  <script src="js/script.js"></script>
+  <script>console.log("Parallax effect to Awe you")
+    document.addEventListener("DOMContentLoaded", function () {
+      var e = document.querySelectorAll(".parallax");
+      M.Parallax.init(e, 0);
+      var a = document.querySelectorAll(".sidenav");
+      M.Sidenav.init(a, !0)
+    });</script>
+
+</html>

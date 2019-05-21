@@ -1,0 +1,74 @@
+.avtar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-color: #cfdbe2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.08);
+  margin: -10px 20px 0 50px;
+  float: left; }
+
+.avtaricon {
+  font-size: 50px;
+  margin: 5px;
+  color:WHITE; }
+
+.lighttext {
+  color: silver;
+  margin-top: 0px; }
+
+/* talk bubble contents */
+.talktext {
+  padding: 12px;;
+  text-align: left;
+  line-height: 1.5em; }
+
+.talktext p {
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em; }
+
+/* comments section */
+.talk-bubble {
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  height: auto;
+  border: 1px solid lightgrey;
+  background-color: white;
+  box-shadow:21px 25px 25px -17px lightgrey;
+}
+
+
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px; }
+
+.tri-right.border.btm-left:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -8px;
+  right: auto;
+  top: auto;
+  bottom: -40px;
+  border: 32px solid;
+  border-color: #666 transparent transparent #666; }
+
+.tri-right.btm-left:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  border: 22px solid;
+  border-color: white transparent transparent white; }
+
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px; }

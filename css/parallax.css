@@ -1,0 +1,42 @@
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  min-height: 380px;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9); }
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+.parallax img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+.services {
+  flex-direction: row;
+  justify-content: center; }
+
+.serviceitem {
+  margin: 0 20px !important; }
+
+.serviceicon {
+  height: 100px;
+  width: 100px;
+  /* margin: auto; */
+  border-radius: 10px;
+  color: #fc4c02;
+  z-index: 9999;
+  border: 2px solid #fc4c02;
+  background: transparent;
+  padding: 10px;
+  font-size: 50px;
+  text-align: center; }
